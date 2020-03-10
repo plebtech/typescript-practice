@@ -1,7 +1,10 @@
 "use strict";
 function Greeting(options) {
-    $('#name').html("Hello " + options.name + "!");
-    console.log("Hello " + options.name + "!");
+    var name = options.name;
+    $('#name').html("Hello " + name + "!");
+    $('#name').click(function () {
+        alert(name);
+    });
 }
 Greeting({
     name: 'Nick'
